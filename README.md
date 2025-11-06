@@ -44,7 +44,7 @@ To create a sustainable digital marketplace that:
 ---
 
 ## Live Demo
-https://Ranjeetha13.github.io/ArtisanConnectAI/
+ https://ranjeetha13.github.io/ArtisanConnectAI/
 
 ## How to Run the Project
 
