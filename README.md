@@ -51,4 +51,4 @@ https://Ranjeetha13.github.io/ArtisanConnectAI/
 1. Clone the repository:
    ```bash
    git clone https://github.com/Ranjeetha13/ArtisanConnectAI.git
-2. Open welcome.html in your browser.
+2. Open index.html in your browser.
