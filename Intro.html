@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable E-commerce</title>
+    <link rel="stylesheet" href="styles3.css"> <!-- Link to your CSS file -->
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+    <header>
+        <h1>Sustainable E-commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#personal-details">Personal Details</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Sustainable E-commerce</h2>
+        <p>Your one-stop shop for eco-friendly products.</p>
+        <input type="text" id="search" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+    </section>
+
+    <main>
+        <section class="categories">
+            <h2>Shop by Category</h2>
+            <div class="category-boxes">
+                <div class="category-box" onclick="filterProducts('Home Decor')">
+                    <h3>Home Decor</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Fashion')">
+                    <h3>Fashion</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Beauty & Personal Care')">
+                    <h3>Beauty & Personal Care</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Kitchenware')">
+                    <h3>Kitchenware</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Gardening Supplies')">
+                    <h3>Gardening Supplies</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Toys & Games')">
+                    <h3>Toys & Games</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Stationery')">
+                    <h3>Stationery</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Bags & Accessories')">
+                    <h3>Bags & Accessories</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Pet Products')">
+                    <h3>Pet Products</h3>
+                </div>
+                <div class="category-box" onclick="filterProducts('Health & Wellness')">
+                    <h3>Health & Wellness</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="product-list">
+            <h2>Products</h2>
+            <ul id="product-list">
+                <!-- Products will be displayed here dynamically -->
+            </ul>
+        </section>
+        <section id="home-decor">
+            <h2>Home Decor</h2>
+            <ul>
+                <li>
+                    <a href="product1.html">Handwoven Rug</a>
+                    <p>Description: A beautiful handwoven rug made from natural fibers.</p>
+                    <p>Price: ₹9,000.00</p>
+                    <p>Rating: ★★★★☆ (4.5)</p>
+                </li>
+                <li>
+                    <a href="product2.html">Recycled Glass Vase</a>
+                    <p>Description: A stunning vase made from 100% recycled glass.</p>
+                    <p>Price: ₹2,500.00</p>
+                    <p>Rating: ★★★★★ (5.0)</p>
+                </li>
+                <li>
+                    <a href="product3.html">Bamboo Wall Art</a>
+                    <p>Description: Unique wall art crafted from sustainable bamboo.</p>
+                    <p>Price: ₹6,000.00</p>
+                    <p>Rating: ★★★★☆ (4.2)</p>
+                </li>
+                <li>
+                    <a href="product4.html">Natural Fiber Basket</a>
+                    <p>Description: Handcrafted basket made from natural fibers, perfect for storage.</p>
+                    <p>Price: ₹1,800.00</p>
+                    <p>Rating: ★★★★☆ (4.6)</p>
+                </li>
+                <li>
+                    <a href="product5.html">Upcycled Wood Furniture</a>
+                    <p>Description: Stylish furniture made from upcycled wood.</p>
+                    <p>Price: ₹22,000.00</p>
+                    <p>Rating: ★★★★★ (4.8)</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="fashion">
+            <h2>Fashion</h2>
+            <ul>
+                <li>
+                    <a href="product6.html">Organic Cotton T-shirt</a>
+                    <p>Description: Soft and breathable t-shirt made from organic cotton.</p>
+                    <p>Price: ₹1,800.00</p>
+                    <p>Rating: ★★★★★ (4.9)</p>
+                </li>
+                <li>
+                    <a href="product7.html">Handcrafted Leather Bag</a>
+                    <p>Description: Durable leather bag handcrafted by artisans.</p>
+                    <p>Price: ₹12,000.00</p>
+                    <p>Rating: ★★★★☆ (4.4)</p>
+                </li>
+                <li>
+                    <a href="product8.html">Recycled Fabric Scarf</a>
+                    <p>Description: Stylish scarf made from recycled fabric.</p>
+                    <p>Price: ₹1,200.00</p>
+                    <p>Rating: ★★★★☆ (4.3)</p>
+                </li>
+                <li>
+                    <a href="product9.html">Hemp Clothing</a>
+                    <p>Description: Comfortable clothing made from sustainable hemp.</p>
+                    <p>Price: ₹3,000.00</p>
+                    <p>Rating: ★★★★★(4.7)</p>
+                  </li>
+                  <li>
+                      <a href="product10.html">Fair-Trade Jewelry</a>
+                      <p>Description: Beautiful jewelry made by artisans under fair-trade conditions.</p>
+                      <p>Price: ₹2,500.00</p>
+                      <p>Rating: ★★★★☆ (4.6)</p>
+                  </li>
+              </ul>
+          </section>
+  
+          <section id="beauty">
+              <h2>Beauty & Personal Care</h2>
+              <ul>
+                  <li>
+                      <a href="product11.html">Organic Skincare Products</a>
+                      <p>Description: Natural skincare products made from organic ingredients.</p>
+                      <p>Price: ₹1,500.00</p>
+                      <p>Rating: ★★★★★ (4.8)</p>
+                  </li>
+                  <li>
+                      <a href="product12.html">Handmade Soap</a>
+                      <p>Description: Luxurious handmade soap with natural ingredients.</p>
+                      <p>Price: ₹300.00</p>
+                      <p>Rating: ★★★★★ (5.0)</p>
+                  </li>
+                  <li>
+                      <a href="product13.html">Natural Deodorant</a>
+                      <p>Description: Eco-friendly deodorant made from natural ingredients.</p>
+                      <p>Price: ₹400.00</p>
+                      <p>Rating: ★★★★☆ (4.4)</p>
+                  </li>
+                  <li>
+                      <a href="product14.html">Eco-Friendly Makeup</a>
+                      <p>Description: Makeup products made from sustainable and natural ingredients.</p>
+                      <p>Price: ₹1,200.00</p>
+                      <p>Rating: ★★★★☆ (4.5)</p>
+                  </li>
+                  <li>
+                      <a href="product15.html">Bamboo Toothbrush</a>
+                      <p>Description: Biodegradable toothbrush made from bamboo.</p>
+                      <p>Price: ₹150.00</p>
+                      <p>Rating: ★★★★★ (4.9)</p>
+                  </li>
+              </ul>
+          </section>
+  
+          <section id="kitchenware">
+              <h2>Kitchenware</h2>
+              <ul>
+                  <li>
+                      <a href="product16.html">Bamboo Utensils</a>
+                      <p>Description: Eco-friendly kitchen utensils made from bamboo.</p>
+                      <p>Price: ₹800.00</p>
+                      <p>Rating: ★★★★☆ (4.6)</p>
+                  </li>
+                  <li>
+                      <a href="product17.html">Reusable Beeswax Wraps</a>
+                      <p>Description: Sustainable alternative to plastic wrap.</p>
+                      <p>Price: ₹600.00</p>
+                      <p>Rating: ★★★★★ (4.8)</p>
+                  </li>
+                  <li>
+                      <a href="product18.html">Glass Storage Containers</a>
+                      <p>Description: Durable glass containers for food storage.</p>
+                      <p>Price: ₹1,200.00</p>
+                      <p>Rating: ★★★★☆ (4.5)</p>
+                  </li>
+                  <li>
+                      <a href="product19.html">Handcrafted Cutting Board</a>
+                      <p>Description: Beautiful cutting board made from sustainable wood.</p>
+                      <p>Price: ₹1,500.00</p>
+                      <p>Rating: ★★★★★ (4.7)</p>
+                  </li>
+                  <li>
+                      <a href="product20.html">Organic Cotton Dish Towels</a>
+                      <p>Description: Soft and absorbent dish towels made from organic cotton.</p>
+                      <p>Price: ₹500.00</p>
+                      <p>Rating: ★★★★☆ (4.4)</p>
+                  </li>
+              </ul>
+          </section>
+  
+          <section id="gardening">
+              <h2>Gardening Supplies</h2>
+              <ul>
+                  <li>
+                      <a href="product21.html">Seed Bombs</a>
+                      <p>Description: Eco-friendly seed bombs for easy planting.</p>
+                      <p>Price: ₹300.00</p>
+                      <p>Rating: ★★★★☆ (4.5)</p>
+                  </li>
+                  <li>
+                      <a href="product22.html">Biodegradable Pots</a>
+                      <p>Description: Pots made from biodegradable materials for planting.</p>
+                      <p>Price: ₹400.00</p>
+                      <p>Rating: ★★★★☆ (4.6)</p>
+                    </li>
+                    <li>
+                        <a href="product23.html">Organic Seeds</a>
+                        <p>Description: High-quality organic seeds for your garden.</p>
+                        <p>Price: ₹200.00</p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                    </li>
+                    <li>
+                        <a href="product24.html">Handcrafted Garden Tools</a>
+                        <p>Description: Durable garden tools made by skilled artisans.</p>
+                        <p>Price: ₹1,000.00</p>
+                        <p>Rating: ★★★★☆ (4.7)</p>
+                    </li>
+                    <li>
+                        <a href="product25.html">Natural Fertilizers</a>
+                        <p>Description: Organic fertilizers to promote healthy plant growth.</p>
+                        <p>Price: ₹600.00</p>
+                        <p>Rating: ★★★★★ (4.9)</p>
+                    </li>
+                </ul>
+            </section>
+    
+            <section id="toys">
+                <h2>Toys & Games</h2>
+                <ul>
+                    <li>
+                        <a href="product26.html">Wooden Toys</a>
+                        <p>Description: Eco-friendly wooden toys for children.</p>
+                        <p>Price: ₹1,200.00</p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                    </li>
+                    <li>
+                        <a href="product27.html">Organic Cotton Stuffed Animals</a>
+                        <p>Description: Soft and safe stuffed animals made from organic cotton.</p>
+                        <p>Price: ₹800.00</p>
+                        <p>Rating: ★★★★★ (4.9)</p>
+                    </li>
+                    <li>
+                        <a href="product28.html">Eco-Friendly Puzzles</a>
+                        <p>Description: Fun puzzles made from sustainable materials.</p>
+                        <p>Price: ₹600.00</p>
+                        <p>Rating: ★★★★☆ (4.4)</p>
+                    </li>
+                    <li>
+                        <a href="product29.html">Handcrafted Board Games</a>
+                        <p>Description: Unique board games made from natural materials.</p>
+                        <p>Price: ₹1,500.00</p>
+                        <p>Rating: ★★★★☆ (4.5)</p>
+                    </li>
+                    <li>
+                        <a href="product30.html">Natural Rubber Balls</a>
+                        <p>Description: Safe and durable balls made from natural rubber.</p>
+                        <p>Price: ₹400.00</p>
+                        <p>Rating: ★★★★☆ (4.6)</p>
+                    </li>
+                </ul>
+            </section>
+    
+            <section id="stationery">
+                <h2>Stationery</h2>
+                <ul>
+                    <li>
+                        <a href="product31.html">Recycled Paper Notebooks</a>
+                        <p>Description: Notebooks made from 100% recycled paper.</p>
+                        <p>Price: ₹300.00</p>
+                        <p>Rating: ★★★★☆ (4.5)</p>
+                    </li>
+                    <li>
+                        <a href="product32.html">Plantable Pencils</a>
+                        <p>Description: Pencils that can be planted to grow herbs or flowers.</p>
+                        <p>Price: ₹150.00</p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                    </li>
+                    <li>
+                        <a href="product33.html">Eco-Friendly Pens</a>
+                        <p>Description: Biodegradable pens made from sustainable materials.</p>
+                        <p>Price: ₹200.00</p>
+                        <p>Rating: ★★★★☆ (4.4)</p>
+                    </li>
+                    <li>
+                        <a href="product34.html">Handmade Greeting Cards</a>
+                        <p>Description: Beautiful greeting cards made from recycled paper.</p>
+                        <p>Price: ₹100.00</p>
+                        <p>Rating: ★★★★★ (4.9)</p>
+                    </li>
+                    <li>
+                        <a href="product35.html">Natural Ink</a>
+                        <p>Description: Eco-friendly ink made from natural ingredients.</p>
+                        <p>Price: ₹250.00</p>
+                        <p>Rating: ★★★★☆ (4.6)</p>
+                    </li>
+                </ul>
+            </section>
+    
+            <section id="bags">
+                <h2>Bags & Accessories</h2>
+                <ul>
+                    <li>
+                        <a href="product36.html">Handwoven Tote Bags</a>
+                        <p>Description: Stylish tote bags made by local artisans.</p>
+                        <p>Price: ₹1,200.00</p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                    </li>
+                    <li>
+                        <a href="product37.html">Recycled Material Backpacks</a>
+                        <p>Description: Durable backpacks made from recycled materials.</p>
+                        <p>Price: ₹2,500.00</p>
+                        <p>Rating: ★★★★☆ (4.5)</p>
+                    </li>
+                    <li>
+                        <a href="product38.html">Eco-Friendly Wallets</a>
+                        <p>Description: Wallets made from sustainable materials.</p>
+                        <p>Price: ₹1,000.00</p>
+                        <p>Rating: ★★★★☆ (4.4)</p>
+                    </li>
+                    <li>
+                        <a href="product39.html">Natural Fiber Clutches</a>
+                        <p>Description: Elegant clutches made from natural fibers.</p>
+                        <p>Price: ₹1,500.00</p>
+                        <p>Rating: ★★★★★ (4.7)</p>
+                    </li>
+                    <li>
+                        <a href="product40.html">Upcycled Fabric Pouches</a>
+                        <p>Description: Handy pouches made from upcycled fabric.</p>
+                        <p>Price: ₹600.00</p>
+                        <p>Rating: ★★★★☆ (4.6)</p>
+                    </li>
+                </ul>
+            </section>
+    
+            <section id="pets">
+                <h2>Pet Products</h2>
+                <ul>
+                    <li>
+                        <a href="product41.html">Organic Pet Food</a>
+                        <p>Description: Healthy and organic food for your pets.</p>
+                        <p>Price: ₹1,500.00</p>
+                        <p>Rating: ★★★★★ (4.9)</p>
+                    </li>
+                    <li>
+                        <a href="product42.html">Hand<a href="product42.html">Handmade Pet Toys</a>
+                        <p>Description: Safe and durable toys made from natural materials.</p>
+                        <p>Price: ₹800.00</p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                    </li>
+                    <li>
+                        <a href="product43.html">Biodegradable Dog Waste Bags</a>
+                        <p>Description: Eco-friendly waste bags that decompose naturally.</p>
+                        <p>Price: ₹300.00</p>
+                        <p>Rating: ★★★★☆ (4.6)</p>
+                    </li>
+                    <li>
+                        <a href="product44.html">Natural Fiber Pet Beds</a>
+                        <p>Description: Comfortable pet beds made from natural fibers.</p>
+                        <p>Price: ₹2,000.00</p>
+                        <p>Rating: ★★★★★ (4.7)</p>
+                    </li>
+                    <li>
+                        <a href="product45.html">Organic Catnip</a>
+                        <p>Description: 100% organic catnip for your feline friends.</p>
+                        <p>Price: ₹250.00</p>
+                        <p>Rating: ★★★★★ (4.9)</p>
+                    </li>
+                </ul>
+            </section>
+    
+            <section id="wellness">
+                <h2>Health & Wellness</h2>
+                <ul>
+                    <li>
+                        <a href="product46.html">Organic Herbal Tea</a>
+                        <p>Description: A selection of organic herbal teas for relaxation.</p>
+                        <p>Price: ₹500.00</p>
+                        <p>Rating: ★★★★★ (4.8)</p>
+                    </li>
+                    <li>
+                        <a href="product47.html">Natural Essential Oils</a>
+                        <p>Description: Pure essential oils for aromatherapy.</p>
+                        <p>Price: ₹1,200.00</p>
+                        <p>Rating: ★★★★★ (4.9)</p>
+                    </li>
+                    <li>
+                        <a href="product48.html">Eco-Friendly Yoga Mat</a>
+                        <p>Description: Non-toxic yoga mat made from natural materials.</p>
+                        <p>Price: ₹2,000.00</p>
+                        <p>Rating: ★★★★☆ (4.6)</p>
+                    </li>
+                    <li>
+                        <a href="product49.html">Sustainable Water Bottle</a>
+                        <p>Description: Reusable water bottle made from stainless steel.</p>
+                        <p>Price: ₹1,000.00</p>
+                        <p>Rating: ★★★★★ (4.7)</p>
+                    </li>
+                    <li>
+                        <a href="product50.html">Organic Supplements</a>
+                        <p>Description: Health supplements made from organic ingredients.</p>
+                        <p>Price: ₹1,500.00</p>
+                        <p>Rating: ★★★★☆ (4.5)</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <script src="script3.js"></script>
+ 
+    
+        <footer>
+            <p>&copy; 2023 Sustainable E-commerce. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
