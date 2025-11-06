@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - ArtisanConnectAI</title>
+  <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <header>
+    <div class="logo">ArtisanConnectAI</div>
+    <nav>
+      <ul>
+        <li><a href="/shop" class="active">Shop</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/sustainability">Sustainability</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Product Listings Section -->
+    <section class="product-listings">
+      <h1>Shop Sustainable Products</h1>
+      <div class="filters">
+        <select>
+          <option value="">Category</option>
+          <option value="clothing">Clothing</option>
+          <option value="home-goods">Home Goods</option>
+          <option value="accessories">Accessories</option>
+        </select>
+        <select>
+          <option value="">Sustainability</option>
+          <option value="organic">Organic</option>
+          <option value="recycled">Recycled</option>
+          <option value="upcycled">Upcycled</option>
+        </select>
+        <select>
+          <option value="">Price Range</option>
+          <option value="0-50">$0 - $50</option>
+          <option value="50-100">$50 - $100</option>
+          <option value="100+">$100+</option>
+        </select>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image" style="background-color: #e0f2e9;"></div>
+          <h3>Handwoven Scarf</h3>
+          <p>Made with organic cotton by artisans in India.</p>
+          <span>$45.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image" style="background-color: #e0f2e9;"></div>
+          <h3>Recycled Glass Vase</h3>
+          <p>Crafted from 100% recycled materials in Mexico.</p>
+          <span>$60.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image" style="background-color: #e0f2e9;"></div>
+          <h3>Bamboo Cutlery Set</h3>
+          <p>Sustainable dining, handcrafted in Vietnam.</p>
+          <span>$25.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Artisans Section -->
+    <section class="artisans">
+      <h2>Meet Our Artisans</h2>
+      <div class="artisan-grid">
+        <div class="artisan-card">
+          <div class="artisan-image" style="background-color: #e0f2e9;"></div>
+          <h3>Anita from India</h3>
+          <p>Anita specializes in handweaving organic cotton scarves, using traditional techniques passed down through generations.</p>
+          <a href="/artisans/anita" class="learn-more">Learn More</a>
+        </div>
+        <div class="artisan-card">
+          <div class="artisan-image" style="background-color: #e0f2e9;"></div>
+          <h3>Miguel from Mexico</h3>
+          <p>Miguel creates stunning vases from recycled glass, promoting a circular economy in his community.</p>
+          <a href="/artisans/miguel" class="learn-more">Learn More</a>
+        </div>
+        <div class="artisan-card">
+          <div class="artisan-image" style="background-color: #e0f2e9;"></div>
+          <h3>Lan from Vietnam</h3>
+          <p>Lan crafts sustainable bamboo cutlery sets, supporting eco-friendly dining practices.</p>
+          <a href="/artisans/lan" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability Initiatives Section -->
+    <section class="sustainability-info">
+      <h2>Our Commitment to Sustainability</h2>
+      <div class="sustainability-grid">
+        <div class="sustainability-card">
+          <h3>Plastic Free Packaging</h3>
+          <p>We use biodegradable materials to ensure your orders arrive without harming the planet.</p>
+        </div>
+        <div class="sustainability-card">
+          <h3>Carbon Neutral Shipping</h3>
+          <p>We offset the carbon footprint of every shipment through reforestation projects.</p>
+        </div>
+        <div class="sustainability-card">
+          <h3>Eco-Friendly Materials</h3>
+          <p>Our products are made with organic, recycled, or upcycled materials to reduce environmental impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Engagement Section -->
+    <section class="community">
+      <h2>Join Our Eco-Conscious Community</h2>
+      <div class="community-content">
+        <div class="newsletter">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest sustainable products and tips for eco-friendly living.</p>
+          <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="blog-posts">
+          <h3>Explore Our Blog</h3>
+          <div class="blog-grid">
+            <div class="blog-card">
+              <h4>5 Ways to Live More Sustainably</h4>
+              <p>Discover simple steps to reduce your environmental footprint.</p>
+              <a href="/blog/sustainable-living" class="read-more">Read More</a>
+            </div>
+            <div class="blog-card">
+              <h4>The Art of Handweaving</h4>
+              <p>Learn about the traditional techniques used by our artisans.</p>
+              <a href="/blog/handweaving" class="read-more">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 ArtisanConnectAI. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+  </footer>
+  <script src="explore.js"></script>
+</body>
+
+</html>

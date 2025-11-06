@@ -1,0 +1,196 @@
+/* Reset default styles */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Define custom properties (variables) */
+:root {
+  --primary-green: #2e8b57;
+  --light-green: #54b8aa;
+  --dark-green: #1a4d2e;
+  --text-color: #ffffff;
+  --accent-color: #a7ffee;
+  --background-green: #e0f2e9;
+}
+
+/* Base body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-green);
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+/* Background overlay from the first file */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(30, 77, 46, 0.8), rgba(30, 77, 46, 0.8)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Changed to -1 to ensure content stays above */
+  animation: subtle-move 20s infinite alternate;
+}
+
+/* Animation for subtle background movement */
+@keyframes subtle-move {
+  0% { background-position: center; }
+  100% { background-position: center 10%; }
+}
+
+/* Header styles */
+header {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(30, 77, 46, 0.9);
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.learn-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--dark-green);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.learn-more:hover {
+  background-color: #8ed1c8;
+  transform: scale(1.05);
+}
+
+/* Container for main content */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Card styles */
+.card {
+  background: rgba(30, 77, 46, 0.7);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation: fade-in 1s ease-in-out;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.card ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(30, 77, 46, 0.9);
+  z-index: 1;
+}
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Side animations (assuming you want to keep these) */
+.side-animations {
+  position: fixed;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 0;
+}
+
+.left-side {
+  left: 0;
+}
+
+.right-side {
+  right: 0;
+}
+
+.tree {
+  width: 60px;
+  height: 100px;
+  background: var(--dark-green);
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.petal {
+  width: 20px;
+  height: 20px;
+  background: var(--light-green);
+  border-radius: 50%;
+  position: absolute;
+  animation: fall 5s infinite;
+}
+
+.left-side .petal:nth-child(2) { left: 20px; animation-delay: 1s; }
+.left-side .petal:nth-child(3) { left: 40px; animation-delay: 2s; }
+.right-side .petal:nth-child(2) { right: 20px; animation-delay: 1.5s; }
+.right-side .petal:nth-child(3) { right: 40px; animation-delay: 2.5s; }
+
+@keyframes fall {
+  0% { top: -20px; opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}

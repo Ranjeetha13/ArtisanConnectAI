@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Product Upload</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8f9fa; text-align: center; }
+        .container { max-width: 400px; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, select, textarea, button { width: 100%; margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        #imagePreview { width: 100%; max-height: 200px; object-fit: cover; margin-top: 10px; }
+        .recording { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Product</h2>
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="file" id="productImage" accept="image/*">
+        <img id="imagePreview" style="display:none;">
+        <button id="recordButton">🎙 Record Description</button>
+        <p id="recordingStatus"></p>
+        <textarea id="description" rows="3" placeholder="Product Description"></textarea>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="bn">Bengali</option>
+            <option value="ta">Tamil</option>
+            <option value="te">Telugu</option>
+            <option value="mr">Marathi</option>
+            <option value="gu">Gujarati</option>
+            <option value="kn">Kannada</option>
+            <option value="ur">Urdu</option>
+            <option value="as">Assamese</option>
+            <option value="ml">Malayalam</option>
+            <option value="pa">Punjabi</option>
+        </select>
+        <button onclick="submitProduct()">Submit Product</button>
+    </div>
+    <a href="consumer.html" style="display: inline-block; margin-top: 10px; text-decoration: none; background: #007bff; color: white; padding: 10px 20px; border-radius: 5px;">🏪 Go to Marketplace</a>
+
+
+    <script>
+        document.getElementById('productImage').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('imagePreview').src = e.target.result;
+                    document.getElementById('imagePreview').style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('recordButton').addEventListener('click', function() {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRecognition) {
+                alert("Speech recognition not supported in this browser.");
+                return;
+            }
+            const recognition = new SpeechRecognition();
+            recognition.lang = document.getElementById('language').value;
+            recognition.start();
+            document.getElementById('recordingStatus').textContent = "Listening...";
+            recognition.onresult = function(event) {
+                document.getElementById('description').value = event.results[0][0].transcript;
+                document.getElementById('recordingStatus').textContent = "";
+            };
+            recognition.onerror = function() {
+                document.getElementById('recordingStatus').textContent = "Error or no input detected.";
+            };
+        });
+
+        function submitProduct() {
+            const productName = document.getElementById('productName').value;
+            const description = document.getElementById('description').value;
+            const language = document.getElementById('language').value;
+            alert(`Product: ${productName}\nDescription: ${description}\nLanguage: ${language}`);
+        }
+    </script>
+</body>
+</html>

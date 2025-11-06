@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background">
+    <div class="container">
+        <div class="login-box blur-outline">
+            <h2>Login to your account</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email or Phone Number" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <select id="userType">
+                    <option value="consumer">Consumer</option>
+                    <option value="artisan">Artisan</option>
+                </select>
+                <div class="options">
+                    <label class="remember-me"><input type="checkbox" id="rememberMe"> Remember me</label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit">Sign in</button>
+            </form>
+            <div class="social-login">
+                <button class="google" id="googleLogin">Sign in with Google</button>
+                <button class="apple" id="appleLogin">Sign in with Apple</button>
+            </div>
+            <p>Don’t have an account? <a href="#" id="showSignup">Sign up now</a></p>
+        </div>
+        
+        <div class="signup-box blur-outline" style="display: none;">
+            <h2>Create an account</h2>
+            <form id="signupForm">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <select id="signupUserType">
+                    <option value="consumer">Consumer</option>
+                    <option value="artisan">Artisan</option>
+                </select>
+                <button type="submit">Sign up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Sign in</a></p>
+        </div>
+        
+        <div class="image-section">
+            <img src="img1.jpg" alt="Jewelry">
+            <img src="img2.jpg" alt="Jewelry">
+            <img src="img3.jpg" alt="Jewelry">
+            <img src="img4.jpg" alt="Jewelry">
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Add a login form to the login page -->
+
+
+</body>
+</html>
